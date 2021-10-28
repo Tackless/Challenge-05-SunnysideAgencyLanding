@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+    h2 {
+        grid-column: 1/6;
+        color: v.$grayish_blue;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.8rem;
+        margin: 14rem auto;
+    }
+    .photos-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8rem;
+
+        &> img,source {
+
+                border-radius: 100%;
+                max-height: 10rem;
+        }
+    }
+    .first {
+        grid-column: 2/3;
+    }
+    .testimonial {
+        text-align: center;
+        width: 78%;
+        margin: 0 auto;
+
+        .text {
+            line-height: 3rem;
+            color: v.$dark_grayish_blue;
+        }
+    }
+}
+.testimonial-data {
+    margin-top: 8rem;
+    margin-bottom: 20rem;
+    .name {
+        font-family: v.$font_title;
+        // color: rgb(148, 134, 134);
+        color: black;
+    }
+    .job {
+        color: v.$grayish_blue;
+    }
+}
