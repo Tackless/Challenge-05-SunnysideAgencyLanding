@@ -3,5 +3,11 @@
 
 .container-main {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+
+    .imagen {
+        width: 95%;
+        max-width: 20rem;
+    }
 }
