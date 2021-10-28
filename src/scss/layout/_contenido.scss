@@ -82,12 +82,15 @@
 
     }
     .article {
-        padding-top: 45rem;
+        margin: 0 auto 10rem;
+        align-self: flex-end;
     }
     .graphic-design,
     .photography {
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+
     }
     .graphic-design {
         background-image: url(/build/img/desktop/image-graphic-design.webp);
