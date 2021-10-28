@@ -2,12 +2,67 @@
 @use 'base/mixins' as m;
 
 .container-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    
+    .article {
+        width: 50%;
+        margin: auto;
 
+        h2 {
+            font-size: 5rem;
+        }
+        p {
+            color: v.$grayish_blue;
+            line-height: 4rem;
+        }
+        
+    }
     .imagen {
-        width: 95%;
-        max-width: 20rem;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+        
+    }
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    } 
+}
+.learn-more {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    a {
+        font-family: v.$font_title;
+        font-weight: 900;
+        color: black;
+        text-transform: uppercase;
+        text-align: left;
+        margin: 0 0 -1.6rem 0.2rem;
+        z-index: 1;
+
+    }
+    .sub {
+        width: 13rem;
+        border: .5rem solid v.$soft_yellow;
+        border-radius: 2rem;
+        
+    }
+    &:hover {
+        .sub {
+            border-color: v.$yellow;
+        }
+    }
+}
+.learn-more-red {
+    .sub {
+        border-color: v.$soft_red;
+    }
+    &:hover {
+        .sub {
+            border-color: v.$red;
+        }
     }
 }
