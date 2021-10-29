@@ -3,11 +3,14 @@
 
 .images-bottom {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(2, 1fr);
     img {
         width: 100%;
         height: 100%;
     }
+    @include m.desktop {
+        grid-template-columns: repeat(4,1fr);
+    } 
 }
 .nav-bottom {
     background-color: v.$background_bottom;
@@ -19,7 +22,7 @@
     .nav-bar-bottom {
         display: flex;
         justify-content: space-evenly;
-        width: 25%;
+        width: 100%;
         a {
             color: v.$dark_blue;
         }
@@ -35,10 +38,19 @@
     }
     .logos {
         display: flex;
-        justify-content: space-between;
-        width: 10%;
+        justify-content: space-evenly;
+        width: 80%;
         
     }
+    @include m.desktop {
+        .nav-bar-bottom {
+            width: 25%;
+        }
+        .logos {
+            justify-content: space-between;
+            width: 10%;
+        }
+    } 
 }
 .attribution {
     font-family: v.$font_title;

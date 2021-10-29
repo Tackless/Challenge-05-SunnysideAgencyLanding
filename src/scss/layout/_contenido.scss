@@ -22,7 +22,7 @@
         width: 100%;
         height: 100%;
     }
-    @include m.tablet {
+    @include m.desktop {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -68,7 +68,7 @@
             border-color: v.$yellow;
         }
     }
-    @include m.tablet {
+    @include m.desktop {
         align-items: flex-start;
 
         .sub-desktop {
@@ -124,7 +124,7 @@
             color: v.$dark_blue;
         }
     }
-    @include m.tablet {
+    @include m.desktop {
         grid-column: 1/3;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
