@@ -26,6 +26,8 @@
     }
     img {
         max-width: 3rem;
+        height: auto;
+        width: auto;
     }
     .logo {
         min-width: 20rem;
@@ -35,9 +37,11 @@
         display: flex;
         justify-content: space-between;
         width: 10%;
+        
     }
 }
 .attribution {
+    font-family: v.$font_title;
     background-color: v.$background_bottom;
     p {
         margin: 0;
